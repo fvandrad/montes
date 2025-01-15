@@ -1,0 +1,325 @@
+:root {
+    --purple: #603f8b;
+    --aqua: #b4fee7;
+    --violet: #a16ae8;
+    --fuchsia: #fd49a0;
+    --font-family: 'Roboto', sans-serif;
+}
+
+*,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--purple), var(--violet));
+    color: #fff;
+    margin: 0;
+    line-height: 1.6;
+    width: 100%;
+}
+
+header {
+    background: linear-gradient(to right, var(--violet), var(--fuchsia));
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+    background: rgba(96, 63, 139, 0.9);
+    border-radius: 5px;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--aqua);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(96, 63, 139, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--aqua);
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger-menu.active .line2 {
+        opacity: 0;
+    }
+
+    .burger-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease;
+        background: rgba(96, 63, 139, 0.95);
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    .parallax h2 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 140px;
+    margin-top: -60px;
+}
+
+.section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+#inicio {
+    animation: fadeIn 1s ease;
+    margin-top: -100px;
+    padding: 40px 60px;
+}
+
+.parallax {
+    height: 500px;
+    background-image: url('images/Firefly-montanha.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 2rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.parallax-1 {
+    height: 500px;
+    background-image: url('images/Firefly-montanha-1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 2rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.parallax .parallax-1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--aqua);
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.parallax-1 h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--aqua);
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .parallax h2 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 60px;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.testimonial {
+    background: rgba(180, 254, 231, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: linear-gradient(to right, var(--purple), var(--violet));
+    color: var(--aqua);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
