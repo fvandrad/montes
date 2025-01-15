@@ -1,6 +1,6 @@
-# Montanhas 🌄
+# Montes 🌄
 
-Bem-vindo ao projeto **Montanhas**! Este projeto é uma página web que celebra a beleza e a majestade das montanhas, oferecendo informações, galerias e experiências relacionadas a essas maravilhas naturais.
+Bem-vindo ao projeto **Montes**! Este projeto é uma página web que celebra a beleza e a majestade das montanhas, oferecendo informações, galerias e experiências relacionadas a essas maravilhas naturais.
 
 ## Visão Geral 📜
 
